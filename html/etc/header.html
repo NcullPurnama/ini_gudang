@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!----======== CSS ======== -->
+        <style>
+            .top .search-box input{
+                position: absolute;
+                border: 1px solid var(--border-color);
+                background-color: var(--panel-color);
+                padding: 0 25px 0 50px;
+                border-radius: 5px;
+                height: 50%;
+                width: 50%;
+                color: var(--text-color);
+                font-size: 15px;
+                font-weight: 400;
+                outline: none;
+            }
+            .top .search-box i{
+                position: absolute;
+                left: 15px;
+                font-size: 22px;
+                z-index: 10;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--black-light-color);
+            }
+            .top img{
+                width: 40px;
+                border-radius: 50%;
+            }
+        </style>
+        
+        <!----===== Iconscout CSS ===== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="/images/profile.jpg" alt="">
+        </div>
+    </body>
+</html>
