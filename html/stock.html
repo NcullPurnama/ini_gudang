@@ -25,7 +25,7 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="/html/index.html">
+                <li><a href="/html/dashboard.html">
                     <i class="fa-solid fa-gauge-high"></i>
                     <span class="link-name">Dashboard</span>
                 </a></li>
@@ -59,50 +59,71 @@
         </div>
     </nav>
 
-    <section class="stock">
+    <section class="dashboard">
         <div class="top">
-            <i class="fa-solid fa-sliders"></i>
+          <i class="fa-solid fa-sliders"></i>
+  
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search here..." />
+          </div>
+  
+          <img src="/images/profile.jpg" alt="" />
+        </div>
+  
+        <!-- <iframe src="/html/etc/header.html" width="100%" height="100"></iframe> -->
+  
+        <div class="dash-content" id="stock">
+  
+          <div class="activity">
+            <div class="title">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span class="text">Current Stock</span>
+            </div>
+  
+            <div class="activity-data">
+              <div class="data names">
+                <span class="data-title">Nama Barang</span>
+                <span class="data-list">Apel</span>
+                <span class="data-list">Apel</span>
+                <span class="data-list">Apel</span>
+                <span class="data-list">Apel</span>
+                <span class="data-list">Apel</span>
+                <span class="data-list">Apel</span>
+                <span class="data-list">Apel</span>
+              </div>
 
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search here...">
+              <div class="data joined">
+                <span class="data-title">Jumlah Barang</span>
+                <span class="data-list">20</span>
+                <span class="data-list">20</span>
+                <span class="data-list">20</span>
+                <span class="data-list">20</span>
+                <span class="data-list">20</span>
+                <span class="data-list">20</span>
+                <span class="data-list">20</span>
+              </div>
             </div>
             
-            <img src="/images/profile.jpg" alt="">
-        </div>
-
-        <div class="stock-content">
-            <div class="activity">
-                <div class="title">
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span class="text">Current Stock</span>
+            <!--nambah style margin di css-->
+            <div class="button">
+                 <!--jadiin button di css  -->
+                <div class="button_add">
+                    <a href="add_stock.html">
+                        Tambah Stock
+                    </a>
                 </div>
 
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Nama barang</span>
-                        <span class="data-list">Apel</span>
-                        <span class="data-list">Apel</span>
-                        <span class="data-list">Apel</span>
-                        <span class="data-list">Apel</span>
-                        <span class="data-list">Apel</span>
-                        <span class="data-list">Apel</span>
-                        <span class="data-list">Apel</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Qty</span>
-                        <span class="data-list">20</span>
-                        <span class="data-list">20</span>
-                        <span class="data-list">20</span>
-                        <span class="data-list">20</span>
-                        <span class="data-list">20</span>
-                        <span class="data-list">20</span>
-                        <span class="data-list">20</span>
-                    </div>
+                <div class="button_sell">
+                    <a href="sell_stock.html">
+                        Jual Stock
+                    </a>
                 </div>
             </div>
+
+          </div>
         </div>
-    </section>
+      </section>
 
     <script src="/script/script.js"></script>
 </body>
