@@ -314,16 +314,15 @@ nav.close ~ .dashboard .top {
   background-color: var(--box1-color);
   transition: var(--tran-05);
 }
-<<<<<<< HEAD
+
 .boxes .box i {
   font-size: 35px;
   color: var(--text-color);
-=======
+}
 
-.boxes .box i{
-    font-size: 35px;
-    color: var(--text-color);
->>>>>>> 80eafb13f6bf9e1a6c3df73162f94c87361d6679
+.boxes .box i {
+  font-size: 35px;
+  color: var(--text-color);
 }
 .boxes .box .text {
   white-space: nowrap;
