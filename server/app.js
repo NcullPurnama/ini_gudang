@@ -4,7 +4,7 @@ const qs = require('querystring')
 
 const ReadIndexHTML = require('./read/readHTML')
 
-const port = 8000
+const port = 5000
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' })
