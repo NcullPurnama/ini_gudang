@@ -206,7 +206,7 @@ body.dark .switch:before {
 
 .dashboard {
   position: relative;
-  left: 250px;
+  left: 120px;
   background-color: var(--panel-color);
   min-height: 100vh;
   width: calc(100% - 250px);
@@ -214,7 +214,7 @@ body.dark .switch:before {
   transition: var(--tran-05);
 }
 nav.close ~ .dashboard {
-  left: 73px;
+  left: 35px;
   width: calc(100% - 73px);
 }
 .dashboard .top {
