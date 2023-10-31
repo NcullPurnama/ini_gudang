@@ -14,26 +14,6 @@ const Routes = (req, res) => {
       )
       break
 
-    case '':
-      ReadHTML(
-        'html/etc/sidebar.html',
-        'css/style.css',
-        'script/script.js',
-        'Images/profile.jpg',
-        res
-      )
-      break
-
-    case '':
-      ReadHTML(
-        'html/etc/header.html',
-        'css/style.css',
-        'script/script.js',
-        'Images/logo.png',
-        res
-      )
-      break
-
     case '/admin/kwitansi':
       ReadHTML(
         'html/kwitansi.html',
