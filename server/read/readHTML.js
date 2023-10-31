@@ -2,10 +2,6 @@ const fs = require('fs')
 const path = require('path')
 
 const ReadHTML = (htmlPath, cssPath, jsPath, logoPath, res, req) => {
-  res.writeHead(200, {
-    'Content-Type': 'text/html'
-  })
-
   fs.readFile(htmlPath, 'utf8', (err, htmlData) => {
     if (err) {
       res.writeHead(404)

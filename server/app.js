@@ -1,23 +1,32 @@
 const http = require('http')
-const qs = require('querystring')
+const url = require('url')
 
 const Routes = require('./router/routes')
-const dbConnection = require('./db/connection')
+const { dbConnection } = require('./db/connection')
+
+const { AddUser } = require('./controller/userRegis')
 
 const port = 5000
 
 const server = http.createServer(async (req, res) => {
-  // memanggil router
+  const parsedUrl = url.parse(req.url, true)
+
+  // router api
+  if (parsedUrl.pathname === '/api/register' && req.method === 'POST') {
+    AddUser(req, res)
+  } else {
+    res.writeHead(404, { 'Content-Type': 'text/plain' })
+    res.end('Endpoint tidak ditemukan')
+  }
+
+  // router html dan url backend
   Routes(req, res)
 
   // database connection
   try {
-    const { dbClient, database } = await dbConnection()
+    const { dbClient } = await dbConnection()
 
     console.log('Database Connected..')
-
-    const tabel = await database.listCollections().toArray()
-    console.log('Tabel:', tabel)
 
     dbClient.close()
   } catch (err) {
