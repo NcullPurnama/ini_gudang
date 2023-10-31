@@ -1,23 +1,15 @@
 const http = require('http')
-const url = require('node:url')
 const qs = require('querystring')
 
-const ReadIndexHTML = require('./read/readHTML')
+const Routes = require('./router/routes')
 
 const port = 5000
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' })
-  ReadIndexHTML((err, data) => {
-    if (err) {
-      res.writeHead(404)
-      res.write('Error file HTML not Found..')
-    } else {
-      res.write(data)
-    }
+const server = http.createServer(async (req, res) => {
+  // memanggil router
+  Routes(req, res)
 
-    res.end()
-  })
+  // database connection
 })
 
 // mencetak port and host

@@ -1,13 +1,19 @@
 const fs = require('fs')
 
-const ReadStyleCSS = (cb) => {
-  fs.readFile('css/style.css', 'utf-8', (err, data) => {
+const ReadCSS = (path, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/css'
+  })
+
+  fs.readFile(path, (err, data) => {
     if (err) {
-      cb(err, null)
+      res.writeHead(404)
+      res.write('Error File CSS Not Found..')
     } else {
-      cb(null, data)
+      res.write(data)
     }
+    res.end()
   })
 }
 
-module.exports = ReadStyleCSS
+module.exports = ReadCSS

@@ -12,5 +12,8 @@
     "website-gudang"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.2.0"
+  }
 }
