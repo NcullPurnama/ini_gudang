@@ -1,41 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-
-    <!----===== Iconscout CSS ===== -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
+<head>
     <title>Kwitansi</title>
-
     <style>
-      /* Tambahkan beberapa CSS untuk mempercantik tampilan kwitansi */
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .container {
-        max-width: 400px;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+        .kwitansi {
+            font-family: Arial, sans-serif;
+            border: 1px solid #000; /* Menambahkan border ke seluruh kwitansi */
+            padding: 20px; /* Memberikan padding untuk menambahkan ruang antara isi kwitansi dengan border */
+        }
 
-  <body>
-    <div class="container">
-      <h2>KWITANSI</h2>
-      <p>Nama: John Doe</p>
-      <p>Alamat: Jalan Contoh No. 123</p>
-      <p>Tanggal: 30 Oktober 2023</p>
-      <p>Jumlah: $100.00</p>
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nomor-transaksi {
+            margin-top: 20px;
+            font-weight: bold;
+            border-top: 1px solid #000; /* Menambahkan border di atas elemen ini */
+        }
+
+        .terima-dari {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .banyaknya-uang {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .pembayaran {
+            margin-top: 10px;
+        }
+
+        .terbilang {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .garis {
+          border-top: 1px solid #000; /* Menambahkan border di atas elemen ini */
+        }
+        .footer {
+            text-align: right;
+            margin-top: 50px;
+            margin-right: 80px;
+        }
+
+        .pt-info {
+            font-weight: bold;
+            margin-top: 100px;
+            margin-right: 80px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="kwitansi">
+        <div class="header">KWITANSI</div>
+        <div class="nomor-transaksi">Nomor Transaksi: 123456</div>
+        <div class="terima-dari">Sudah Diterima Dari: PT Ncull Sejahtera</div>
+        <div class="banyaknya-uang">Banyaknya Uang: </div>
+        <div class="pembayaran">Untuk Pembayaran: </div>
+        <div class="terbilang">Terbilang: </div>
+        <div class="garis"></div>
+        <div class="footer">Jakarta, <span id="tanggal"></span></div>
+        <div class="pt-info">PT Ncull Sejahtera</div>
     </div>
-    <script src="html2pdf.js"></script>
-    <script src="script.js"></script>
-  </body>
+
+    <script>
+      // Menggunakan JavaScript untuk menampilkan tanggal saat halaman dimuat
+      const tanggalElement = document.getElementById('tanggal');
+      const tanggalSekarang = new Date();
+      const dd = String(tanggalSekarang.getDate()).padStart(2, '0');
+      const mm = String(tanggalSekarang.getMonth() + 1).padStart(2, '0'); // Ingatlah bahwa bulan dimulai dari 0 (Januari) hingga 11 (Desember).
+      const yyy = tanggalSekarang.getFullYear();
+      tanggalElement.textContent = `${dd} ${mm} ${yyy}`;
+  </script>
+
+</body>
 </html>
