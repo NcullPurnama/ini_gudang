@@ -6,9 +6,7 @@ const dbName = 'db_inigudang'
 
 const dbConnection = async () => {
   try {
-    const dbClient = await MongoClient.connect(dbURL, {
-      useUnifiedTopology: true
-    })
+    const dbClient = await MongoClient.connect(dbURL)
     const database = dbClient.db(dbName)
 
     return { dbClient, database }
