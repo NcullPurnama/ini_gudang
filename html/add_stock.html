@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Add Stock with Autocompletion</title>
+</head>
+<body>
+    <h1>Form Add Stock with Autocompletion</h1>
+    <form action="proses_data.php" method="post" enctype="multipart/form-data">
+        <label for="nama_barang">Nama Barang:</label>
+        <input type="text" id="nama_barang" name="nama_barang" list="barang_list">
+        <datalist id="barang_list">
+            <option value="Barang 1">
+            <option value="Barang 2">
+            <option value="Barang 3">
+            <!-- Tambahkan opsi barang sesuai kebutuhan -->
+        </datalist>
+
+        <br>
+
+        <label for="jumlah">Jumlah:</label>
+        <input type="number" id="jumlah" name="jumlah" required>
+
+        <br>
+
+        <label for="bukti_transaksi">Bukti Transaksi (File):</label>
+        <input type="file" id="bukti_transaksi" name="bukti_transaksi" accept=".pdf, .jpg, .png" required>
+
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

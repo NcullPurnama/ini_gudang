@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Sell Stock</title>
+</head>
+<body>
+    <h1>Form Sell Stock</h1>
+    <form action="kwitansi.html" method="get">
+        <label for="nama_barang">Nama Barang:</label>
+        <select id="nama_barang" name="nama_barang">
+            <option value="barang_1">Barang 1</option>
+            <option value="barang_2">Barang 2</option>
+            <option value="barang_3">Barang 3</option>
+            <!-- Tambahkan opsi barang sesuai kebutuhan -->
+        </select>
+
+        <br>
+
+        <label for="jumlah">Jumlah Barang:</label>
+        <div id="jumlah_barang">
+            <input type="number" id="jumlah" name="jumlah" value="1" required>
+            <button type="button" id="tambah">Tambah</button>
+            <button type="button" id="kurang">Kurang</button>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Buat Kwitansi">
+    </form>
+
+    <script>
+        // JavaScript untuk menambah dan mengurangi jumlah barang
+        document.getElementById("tambah").addEventListener("click", function () {
+            var jumlahInput = document.getElementById("jumlah");
+            var jumlah = parseInt(jumlahInput.value) || 0;
+            jumlahInput.value = jumlah + 1;
+        });
+
+        document.getElementById("kurang").addEventListener("click", function () {
+            var jumlahInput = document.getElementById("jumlah");
+            var jumlah = parseInt(jumlahInput.value) || 0;
+            if (jumlah > 0) {
+                jumlahInput.value = jumlah - 1;
+            }
+        });
+    </script>
+</body>
+</html>
