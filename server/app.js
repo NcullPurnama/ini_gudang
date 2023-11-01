@@ -5,6 +5,8 @@ const Routes = require('./router/routes')
 const { dbConnection } = require('./db/connection')
 
 const { AddUser } = require('./controller/userRegis')
+const { UserLogin } = require('./controller/userLogin')
+
 const ReadHTML = require('./read/readHTML')
 
 const port = 4000
@@ -17,7 +19,15 @@ const server = http.createServer(async (req, res) => {
   const url = req.url
 
   if (req.method === 'POST') {
-    AddUser(req, res)
+    switch (url) {
+      case '/api/register':
+        AddUser(req, res)
+        break
+
+      case '/api/login':
+        UserLogin(req, res)
+        break
+    }
   } else if (req.method === 'GET') {
     switch (url) {
       case '/admin/dashboard':

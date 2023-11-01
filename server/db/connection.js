@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb')
 
 const dbURL =
-  'mongodb+srv://viddyvirstandi28:ViddyPurnama02@viddy.dk1bmjv.mongodb.net/db_inigudang?retryWrites=true&w=majority'
+  'mongodb+srv://PurwaWiadnyana:2@dbwdnyana.gmzfj6d.mongodb.net/db_inigudang?retryWrites=true&w=majority'
 const dbName = 'db_inigudang'
 
 const dbConnection = async () => {

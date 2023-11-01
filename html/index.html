@@ -18,7 +18,7 @@
     <!--form-->
     <div class="login-container">
       <h2>Masuk</h2>
-      <form id="login-form">
+      <form id="login-form" action="/api/login" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required />
 
@@ -26,12 +26,14 @@
         <input type="password" id="password" name="password" required />
 
         <div class="submit">
-          <button type="submit" onclick="window.location.href='dashboard.html'">
+          <button type="submit">
             <i class="fa-solid fa-arrow-right-to-bracket"></i>Masuk
           </button>
         </div>
       </form>
     </div>
     <!--form-->
+
+    <script src="/script/script.js"></script>
   </body>
 </html>

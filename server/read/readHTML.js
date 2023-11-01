@@ -59,4 +59,4 @@ const ReadHTML = (htmlPath, cssPath, jsPath, logoPath, res, req) => {
   })
 }
 
-module.exports = {ReadHTML}
+module.exports = ReadHTML

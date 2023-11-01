@@ -30,3 +30,37 @@ sidebarToggle.addEventListener('click', () => {
     localStorage.setItem('status', 'open')
   }
 })
+
+// api user login
+document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.getElementById('login-form')
+
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault()
+
+    const username = document.getElementById('username').value
+    const password = document.getElementById('password').value
+
+    const userData = { username, password }
+
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+      })
+
+      if (response.status === 200) {
+        window.location.href = '/admin/dashboard'
+      } else {
+        const data = await response.json()
+        alert(data.message)
+      }
+    } catch (error) {
+      console.error('Failed to log in:', error)
+    }
+  })
+})
+// end api user login
