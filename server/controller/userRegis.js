@@ -43,7 +43,7 @@ const AddUser = async (req, res) => {
         })
       )
 
-      dbClient.close() // Tutup koneksi setelah selesai
+      dbClient.close()
     } catch (err) {
       console.error('Gagal mendaftarkan pengguna:', err)
       res.writeHead(500, { 'Content-Type': 'application/json' })
