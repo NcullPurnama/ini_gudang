@@ -29,8 +29,7 @@ const UserLogin = async (req, res) => {
 
       if (findUser) {
         res.writeHead(200, {
-          'Content-Type': 'application/json',
-          Location: '/admin/dashboard'
+          'Content-Type': 'application/json'
         })
         res.end(JSON.stringify({ message: 'Login berhasil' }))
       } else {
