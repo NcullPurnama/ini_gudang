@@ -1,9 +1,6 @@
 // frontend
 const ReadHTML = require('../read/readHTML')
 
-// api
-const { AddUser } = require('../controller/userRegis')
-
 const Routes = (req, res) => {
   const url = req.url
 
